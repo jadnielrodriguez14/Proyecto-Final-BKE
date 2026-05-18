@@ -20,6 +20,12 @@ Este es un sistema web completo (Full-Stack) para la gestión y control de tarea
 - **Diseño de Interfaz:** Tailwind CSS (vía CDN)
 - **Herramientas de Desarrollo:** Visual Studio Code y Git/GitHub
 
+## Capturas de Pantalla
+
+[Proyecto Final Imagenes PDF.pdf](https://github.com/user-attachments/files/27976786/Proyecto.Final.Imagenes.PDF.pdf)
+
+
+
 ## 📦 Arquitectura de Carpetas
 ```text
 Proyecto-Final/
@@ -34,3 +40,5 @@ Proyecto-Final/
 ├── .gitignore       # Archivos omitidos en el repositorio
 ├── package.json     # Dependencias y scripts del proyecto
 └── server.js        # Punto de entrada de la aplicación
+
+
