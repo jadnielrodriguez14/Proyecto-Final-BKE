@@ -1,22 +1,36 @@
-# 📋 Gestor de Tareas Full-Stack
+# 📋 Sistema Full-Stack de Gestión de Tareas
 
-Este es un sistema de gestión de tareas desarrollado como proyecto final. Cuenta con un backend con arquitectura REST, persistencia de datos en MySQL, seguridad mediante JSON Web Tokens (JWT) y una interfaz gráfica interactiva y responsiva.
+Este es un sistema web completo (Full-Stack) para la gestión y control de tareas pendientes, desarrollado como proyecto final para la clase de Desarrollo Web Servidor (Web Dev Serv Side). La aplicación implementa una arquitectura de API REST, persistencia de datos en un motor relacional, seguridad por tokens y una interfaz gráfica responsiva.
 
-## 🚀 Características
-- **Autenticación Segura:** Registro e Inicio de sesión con hashing de contraseñas mediante `bcrypt`.
-- **Seguridad (JWT):** Rutas protegidas; los usuarios solo pueden ver, crear y eliminar sus propias tareas.
-- **Validación de Datos:** Uso de `express-validator` para asegurar la integridad de la información en el backend.
-- **Frontend Integrado:** Interfaz limpia y moderna construida con HTML5, JavaScript asíncrono (`fetch`) y estilizada con **Tailwind CSS**.
+## 👤 Información del Estudiante
+- **Nombre:** Jadniel Rodríguez Viera
+- **Institución:** Universidad Interamericana de Puerto Rico, Recinto de Fajardo
+- **Curso:** Desarrollo Web del Lado del Servidor
+
+## 🚀 Características del Proyecto
+- **Autenticación Segura:** Registro e Inicio de sesión con hashing de contraseñas utilizando la librería `bcrypt`.
+- **Seguridad y Control de Accesos:** Rutas del backend protegidas mediante **JSON Web Tokens (JWT)**. Cada usuario autenticado interactúa de forma exclusiva con sus propios datos.
+- **Validación robusta:** Implementación de `express-validator` en el backend para asegurar que los campos cumplan con las reglas de negocio (ej. títulos de tareas válidos).
+- **Frontend Integrado:** Interfaz dinámica y moderna construida con HTML5, JavaScript asíncrono (`fetch`) y estilizada utilizando clases de **Tailwind CSS**.
+- **Operaciones CRUD:** Soporte completo para la creación, lectura y eliminación de tareas en tiempo real.
 
 ## 🛠️ Tecnologías Utilizadas
-- **Backend:** Node.js, Express.js
-- **Base de Datos:** MySQL
-- **Autenticación:** JSON Web Tokens (JWT) y Bcrypt
-- **Frontend:** HTML5, JavaScript (Vanilla ES6), Tailwind CSS (CDN)
+- **Arquitectura de Servidor:** Node.js y Express.js
+- **Base de Datos:** MySQL (Conector `mysql2`)
+- **Diseño de Interfaz:** Tailwind CSS (vía CDN)
+- **Herramientas de Desarrollo:** Visual Studio Code y Git/GitHub
 
-## 📦 Instalación y Configuración
-
-1. Clonar el repositorio.
-2. Instalar las dependencias del backend:
-   ```bash
-   npm install
+## 📦 Arquitectura de Carpetas
+```text
+Proyecto-Final/
+├── config/          # Conexión a la base de datos MySQL
+├── middlewares/     # Protección de rutas mediante JWT
+├── routes/          # Endpoints de la API (/api/auth y /api/tasks)
+├── public/          # Frontend de la aplicación (Servido por Express)
+│   ├── index.html   # Pantalla de Login y Registro
+│   ├── dashboard.html # Panel principal de control de tareas
+│   └── app.js       # Cerebro de JavaScript (Peticiones Fetch y DOM)
+├── .env             # Variables de entorno secretas (Excluido en .gitignore)
+├── .gitignore       # Archivos omitidos en el repositorio
+├── package.json     # Dependencias y scripts del proyecto
+└── server.js        # Punto de entrada de la aplicación
