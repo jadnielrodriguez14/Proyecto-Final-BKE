@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow-md">
+        <h1 class="text-xl font-bold">📋 Mi Panel de Tareas</h1>
+        <button id="logout-btn" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg font-semibold transition duration-200">
+            Cerrar Sesión
+        </button>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6">
+        
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-lg font-bold mb-4 text-gray-800">Crear Nueva Tarea</h2>
+            <form id="task-form" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <input type="text" id="task-title" placeholder="Título (Min. 3 letras)" required 
+                    class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                
+                <input type="text" id="task-desc" placeholder="Descripción (Opcional)" 
+                    class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                
+                <input type="date" id="task-date" 
+                    class="px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                
+                <button type="submit" class="md:col-span-3 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-lg transition duration-200">
+                    + Añadir Tarea
+                </button>
+            </form>
+        </div>
+
+        <h2 class="text-xl font-bold mb-4 text-gray-700">Mis Tareas Guardadas</h2>
+        <div id="tasks-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <p class="text-gray-500">Cargando tus tareas desde la base de datos...</p>
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

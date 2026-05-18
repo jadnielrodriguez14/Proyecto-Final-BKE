@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Ver e Interactuar con Frontend",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}/public"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Iniciar Servidor (Backend)",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/server.js"
+        }
+    ]
+}
